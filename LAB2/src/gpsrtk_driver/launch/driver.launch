@@ -1,0 +1,5 @@
+<launch>
+    <!-- all vars that included.launch requires must be set -->
+    <arg name="port"/>
+    <node name="GPS" pkg="gpsrtk_driver" type="gpsrtk.py" output="screen" args="$(arg port)"></node>
+</launch>
