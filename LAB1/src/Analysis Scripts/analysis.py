@@ -2,6 +2,7 @@
 
 import rosbag
 from matplotlib import pyplot as plt
+import utm
 
 stationary = rosbag.Bag('stationary_data.bag')
 walking=rosbag.Bag('walking_data.bag')
@@ -13,6 +14,8 @@ ssec=[]
 wutmelis=[]
 wutmnlis=[]
 wsec=[]
+
+
 
 for topic,msg,t in stationary.read_messages(topics=['/GPS']):
     sutmelis.append(msg.utm_easting)

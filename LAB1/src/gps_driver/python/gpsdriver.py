@@ -31,8 +31,7 @@ if __name__ == '__main__':
     
     try:
         while not rospy.is_shutdown():
-            
-   
+               
             line = port.readline()
             line=str(line)
             line1=line.split(",")
@@ -45,7 +44,6 @@ if __name__ == '__main__':
             else:
                 if line.startswith("b'$GPGGA"):
                     
-                    coordinate = utm.from_latlon(float(line1[2])/100, float(line1[4])/100)
                     timestamp=str(float(line1[1]))
                     second=(int(timestamp[0:2])*3600)+(int(timestamp[2:4])*60)+int(timestamp[4:6])
                     nsecond=int(float(line1[1][6:]))
@@ -64,10 +62,12 @@ if __name__ == '__main__':
                     lon=float(lon)
 
                     alt=float(line1[9])/100
+
+                    coordinate = utm.from_latlon(lat, lon)
+
+                    utme=float(coordinate[0])
                     
-                    utme=float(coordinate[0]/100)
-                    
-                    utmn=float(coordinate[1]/100)
+                    utmn=float(coordinate[1])
                     
                     zone=float(coordinate[2])
                     
