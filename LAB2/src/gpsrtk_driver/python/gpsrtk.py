@@ -37,13 +37,13 @@ if __name__ == '__main__':
             if line1[2] == '':
                 rospy.logwarn("No data")
             else:
-                if line.startswith("b'\\r$GPGGA"):
+                if line.startswith("b'$GPGGA"):
                     
                     
                     timestamp=str(float(line1[1]))
                     second=(int(float(timestamp[0:2]))*3600)+(int(float(timestamp[2:4]))*60)+int(float(timestamp[4:6]))
                     nsecond=(second*10000) + int(float(line1[1][7:]))
-                    print(nsecond)
+                    #print(nsecond)
                     #rospy.loginfo(float(line1[4])/1000)
                     #stampid=float(line1[1])
                     latd=int(float(line1[2]))//100
