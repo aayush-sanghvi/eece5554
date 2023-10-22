@@ -1,8 +1,0 @@
-prefix=/home/aayush/catkin_ws/eece5554/LAB2/devel
-
-Name: gpsrtk_driver
-Description: Description of gpsrtk_driver
-Version: 0.0.0
-Cflags: -I/home/aayush/catkin_ws/eece5554/LAB2/devel/include
-Libs: -L${prefix}/lib 
-Requires: 

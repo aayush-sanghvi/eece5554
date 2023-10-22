@@ -31,21 +31,19 @@ if __name__ == '__main__':
     
     try:
         while not rospy.is_shutdown():
-            
-            rospy.sleep(1.)
             port.write(bytearray('A','ascii'))
             line = port.readline()
             line=str(line)
             line1=line.split(",")
-            rospy.loginfo(line)
+            #rospy.loginfo(line)
             if line1[2] == '':
                 rospy.logwarn("No data")
             else:
-                if line.startswith("b'$GNGGA"):
+                if line.startswith("b'\\r$GNGGA"):
                     
-                    coordinate = utm.from_latlon(float(line1[2])/100, float(line1[4])/100)
+                    
                     timestamp=str(float(line1[1]))
-                    second=(int(timestamp[0:2])*3600)+(int(timestamp[2:4])*60)+int(timestamp[4:6])
+                    second=(int(float(timestamp[0:2]))*3600)+(int(float(timestamp[2:4]))*60)+int(float(timestamp[4:6]))
                     nsecond=int(float(line1[1][6:]))
                     #rospy.loginfo(float(line1[4])/1000)
                     #stampid=float(line1[1])
@@ -65,9 +63,11 @@ if __name__ == '__main__':
 
                     alt=float(line1[9])/100
                     
-                    utme=float(coordinate[0]/100)
+                    coordinate = utm.from_latlon(lat, lon)
+
+                    utme=float(coordinate[0])
                     
-                    utmn=float(coordinate[1]/100)
+                    utmn=float(coordinate[1])
                     
                     zone=float(coordinate[2])
                     
@@ -86,7 +86,7 @@ if __name__ == '__main__':
                     gps.letter=letter
                     gps_list=[timestamp,second,nsecond,lat,lon,alt,ind,utme,utmn,zone,letter]
 
-                    rospy.loginfo(gps_list)
+                    rospy.loginfo(gps)
 
                     gps_pub.publish(gps)
                     #gps_pub.publish(letter)
