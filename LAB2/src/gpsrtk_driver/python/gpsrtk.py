@@ -13,7 +13,7 @@ from gpsrtk_driver.msg import NavSatMsg
 if __name__ == '__main__':
     if len(sys.argv)>0:
         rospy.loginfo(sys.argv[1])
-    SENSOR_NAME = 'GPS'
+    SENSOR_NAME = 'gps'
     rospy.init_node("gps")
     serial_port = rospy.get_param('~port',sys.argv[1])
     serial_baud = rospy.get_param('~baudrate',9600)
