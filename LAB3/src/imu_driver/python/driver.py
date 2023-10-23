@@ -52,9 +52,11 @@ if __name__ == '__main__':
                 imu.Header.stamp.secs=rospy.get_rostime().secs
                 imu.Header.stamp.nsecs=rospy.get_rostime().nsecs
                 imu.IMU.header.seq+=1
+                imu.IMU.header.frame_id="IMU"
                 imu.IMU.header.stamp.secs=rospy.get_rostime().secs
                 imu.IMU.header.stamp.nsecs=rospy.get_rostime().nsecs
                 imu.MagField.header.seq+=1
+                imu.MagField.header.frame_id="MagField"
                 imu.MagField.header.stamp.secs=rospy.get_rostime().secs
                 imu.MagField.header.stamp.nsecs=rospy.get_rostime().nsecs
                 imu.IMU.orientation.x=x
