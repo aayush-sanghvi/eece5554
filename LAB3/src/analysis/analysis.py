@@ -8,8 +8,8 @@ import numpy as np
 from scipy.io import savemat
 
 
-stationary = rosbag.Bag('aayush_stationary_data.bag')
-savemat('stationary.mat',stationary)
+stationary = rosbag.Bag('stationary_data.bag')
+
 orientation_x=[]
 orientation_y=[]
 orientation_z=[]
