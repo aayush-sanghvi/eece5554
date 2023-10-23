@@ -37,7 +37,7 @@ if __name__ == '__main__':
             if line1[2] == '':
                 rospy.logwarn("No data")
             else:
-                if line.startswith("b'$GPGGA"):
+                if line.startswith("b'$GNGGA"):
                     
                     
                     timestamp=str(float(line1[1]))
