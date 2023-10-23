@@ -13,7 +13,7 @@ from gps_driver.msg import gps_msg
 if __name__ == '__main__':
     if len(sys.argv)>0:
         rospy.loginfo(sys.argv[1])
-    SENSOR_NAME = 'GPS'
+    SENSOR_NAME = 'gps'
     rospy.init_node("gps")
     serial_port = rospy.get_param('~port',sys.argv[1])
     serial_baud = rospy.get_param('~baudrate',4800)
@@ -45,8 +45,8 @@ if __name__ == '__main__':
                 if line.startswith("b'$GPGGA"):
                     
                     timestamp=str(float(line1[1]))
-                    second=(int(timestamp[0:2])*3600)+(int(timestamp[2:4])*60)+int(timestamp[4:6])
-                    nsecond=int(float(line1[1][6:]))
+                    second=(int(float(timestamp[0:2]))*3600)+(int(float(timestamp[2:4]))*60)+int(float(timestamp[4:6]))
+                    nsecond=(second*10000) + int(float(line1[1][7:]))
                     #rospy.loginfo(float(line1[4])/1000)
                     #stampid=float(line1[1])
                     latd=int(float(line1[2]))//100
