@@ -6,7 +6,7 @@ import serial
 import utm
 import sys
 from std_msgs.msg import Float64,Float32
-from gpsrtk_driver.msg import NavSatMsg
+from gpsrtk_driver.msg import gps_msg
 
 if __name__ == '__main__':
     if len(sys.argv)>0:
@@ -18,8 +18,8 @@ if __name__ == '__main__':
     sampling_rate = rospy.get_param('~sampling_rate',20.0)
 
     port = serial.Serial(serial_port, serial_baud, timeout=3.)
-    gps=NavSatMsg()
-    gps_pub=rospy.Publisher(SENSOR_NAME,NavSatMsg,queue_size=5)
+    gps=gps_msg()
+    gps_pub=rospy.Publisher(SENSOR_NAME,gps_msg,queue_size=5)
     bag=rosbag.Bag('gps_data.bag','w')
     
     
