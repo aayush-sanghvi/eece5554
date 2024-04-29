@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/yida/lego-loam/catkin_ws/devel/include/**",
+                "/opt/ros/kinetic/include/**",
+                "/home/yida/lego-loam/catkin_ws/src/LeGO-LOAM/LeGO-LOAM/include/**",
+                "/home/yida/lego-loam/catkin_ws/src/velodyne/velodyne_driver/include/**",
+                "/home/yida/lego-loam/catkin_ws/src/velodyne/velodyne_laserscan/include/**",
+                "/home/yida/lego-loam/catkin_ws/src/velodyne/velodyne_pointcloud/include/**",
+                "/usr/include/**"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}

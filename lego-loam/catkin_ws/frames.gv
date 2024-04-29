@@ -1,0 +1,8 @@
+digraph G {
+"base_link" -> "steer_fl"[label="Broadcaster: /play_1700527893636188713\nAverage rate: 25.206 Hz\nMost recent transform: 1580572855.025 \nBuffer length: 4.920 sec\n"];
+"base_link" -> "steer_fr"[label="Broadcaster: /play_1700527893636188713\nAverage rate: 25.206 Hz\nMost recent transform: 1580572855.025 \nBuffer length: 4.920 sec\n"];
+"steer_fl" -> "wheel_fl"[label="Broadcaster: /play_1700527893636188713\nAverage rate: 25.206 Hz\nMost recent transform: 1580572855.025 \nBuffer length: 4.920 sec\n"];
+"steer_fr" -> "wheel_fr"[label="Broadcaster: /play_1700527893636188713\nAverage rate: 25.206 Hz\nMost recent transform: 1580572855.025 \nBuffer length: 4.920 sec\n"];
+"base_link" -> "wheel_rl"[label="Broadcaster: /play_1700527893636188713\nAverage rate: 25.206 Hz\nMost recent transform: 1580572855.025 \nBuffer length: 4.920 sec\n"];
+"base_link" -> "wheel_rr"[label="Broadcaster: /play_1700527893636188713\nAverage rate: 25.206 Hz\nMost recent transform: 1580572855.025 \nBuffer length: 4.920 sec\n"];
+}
