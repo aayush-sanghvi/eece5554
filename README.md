@@ -1,5 +1,16 @@
 # EECE5554
+This repository contains projects of Robotics Sensing and Navigation course.
 
+1. ROS Basic setup
+   This project follows the basic ROS concepts. It includes code to add two integers, publisher node and subscriber node.
+   The tutorial for this assignment can be found below.
+   https://wiki.ros.org/ROS/Tutorials
+   
+3. GPS-Puck Data collection
+4. Real time kinematics GPS
+5. IMU Noise Characterization with Allan Variance
+6. Navigation with IMU and Magnetometer
+7. Photo Mosaicking
 
 
 ## Getting started
