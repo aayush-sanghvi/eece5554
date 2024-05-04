@@ -18,6 +18,7 @@ This project collects and records data from GNSS puck into a bag file, decodes t
 Two sets of data are recorded,
 1. GPS puck is stationary
 2. GPS puck is moving
+
 ![image](https://github.com/aayush-sanghvi/robotics-sensing-and-navigation/assets/168468569/fc3a4b9c-0a3f-4d6c-ab09-692da61136fc)
 
 For the analysis part, data was then converted into UTM-Easting and UTM-Northing and plotted on a map. The plotted data on the map would display the path travelled and latitude longitude of the sensor.
