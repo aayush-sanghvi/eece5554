@@ -4,7 +4,7 @@ To execute this code, download the src folder into your local repository and run
 ```
 catkin_make
 ```
-This will create two new folders. devel and build
+This will create two new folders, devel and build
 ```
 source devel/setup.bash
 ```
