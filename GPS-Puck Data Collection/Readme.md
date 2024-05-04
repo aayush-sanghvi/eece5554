@@ -1,9 +1,10 @@
 # GPS-Puck Data collection
 
 To execute this code, run the following command
-'''
+```
 roslaunch driver.launch port:=”/dev/tty****
-'''
+```
+
 *Replace **** with USB port number on which GPS puck is connected*
 
 This project collects data from GNSS puck, decodes the message header format to accept data of "$GPGGA" format only.
