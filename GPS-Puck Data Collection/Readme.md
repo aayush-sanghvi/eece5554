@@ -10,7 +10,7 @@ source devel/setup.bash
 ```
 To execute the code, execute the following command
 ```
-roslaunch driver.launch port:=”/dev/tty****
+roslaunch gps_driver driver.launch port:=”/dev/tty****
 ```
 *Replace **** with USB port number on which GPS puck is connected*
 
